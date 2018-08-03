@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Exercise2</string>
+    <string name="your_email">Your email</string>
+    <string name="your_phone">Your phone</string>
+    <string name="your_name">Your name</string>
+    <string name="exercise_2_going_mad">Exercise 2 Going MAD!</string>
+    <string name="androidicon">androidIcon</string>
+    <string name="submit">Submit</string>
+    <string name="i_agree">I Agree</string>
+    <string name="home">Home</string>
+    <string name="screen_2">Screen 2</string>
+    <string name="clear_all">Clear All</string>
+    <string name="exit">Exit</string>
+
+    <string-array name="phones_array">
+        <item>Home</item>
+        <item>Work</item>
+        <item>Mobile</item>
+    </string-array>
+</resources>
