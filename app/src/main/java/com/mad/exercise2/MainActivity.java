@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Snackbar.make(v, "Submit button clicked!", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+
                 EditText name = findViewById(R.id.name_tf);
                 EditText email = findViewById(R.id.email_tf);
                 EditText phone = findViewById(R.id.phone_number);
@@ -70,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         View view = getCurrentFocus();
-        
+
         if (requestCode == REQUEST_CODE) {
-            if (resultCode == RESULT_OK ) {
-                Snackbar.make(view ,R.string.i_agree, Snackbar.LENGTH_SHORT)
+            if (resultCode == RESULT_OK) {
+                Snackbar.make(view, R.string.i_agree, Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();
             } else {
-                Snackbar.make(view ,R.string.i_disagree, Snackbar.LENGTH_SHORT)
+                Snackbar.make(view, R.string.i_disagree, Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();
             }
         }
