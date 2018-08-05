@@ -25,6 +25,7 @@ public class ActivityTwo extends AppCompatActivity {
 
         Intent intent = getIntent();
 
+        //Sets all textViews to the information passed in from previous activity
         TextView name = findViewById(R.id.second_activity_name);
         name.setText(intent.getStringExtra(NAME_EXTRA));
         TextView phone = findViewById(R.id.second_activity_phone);
@@ -34,8 +35,6 @@ public class ActivityTwo extends AppCompatActivity {
         TextView type = findViewById(R.id.second_activity_type);
         type.setText(intent.getStringExtra(TYPE_EXTRA));
 
-
-
         Button submitBtn = findViewById(R.id.second_activity_submit);
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +42,8 @@ public class ActivityTwo extends AppCompatActivity {
                 CheckBox agreeCB = findViewById(R.id.second_activity_agree);
                 boolean isAgree = agreeCB.isChecked();
                 Intent result = new Intent();
+
+                //Checks whether the box was checked and gives appropriate response
                 if (isAgree) {
                     setResult(Activity.RESULT_OK, result);
                 } else {
